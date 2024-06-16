@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol AuthorizationFormDelegate {
+    func submitForm(email: String, password: String)
+}
+
 class AuthorizationForm: UIView {
+    
+    var delegate: AuthorizationFormDelegate?
     
     private var emailField: UITextField = {
         let textField = fiieldWithPaddings()
@@ -51,6 +57,9 @@ class AuthorizationForm: UIView {
     override init(frame: CGRect) {
         super.init(frame: .zero)
         setupFormView()
+        submitButton.addAction(UIAction(handler: { [weak self] _ in
+            self?.submit()
+        }), for: .touchUpInside)
         
     }
     
@@ -79,6 +88,11 @@ class AuthorizationForm: UIView {
             formStack.bottomAnchor.constraint(equalTo: self.bottomAnchor)
             
         ])
+    }
+    
+    
+    private func submit() {
+        self.delegate?.submitForm(email: emailField.text ?? "", password: passwordField.text ?? "")
     }
     
 }

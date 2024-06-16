@@ -8,14 +8,17 @@
 import UIKit
 
 class AuthorizationController: UIViewController {
+    
+    private let viewModel = AuthorizationViewModel()
 
-    let authorizationHeader = AutorizationHeader()
-    let authorizationForm = AuthorizationForm()
+    private let authorizationHeader = AutorizationHeader()
+    private let authorizationForm = AuthorizationForm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupAuthorizationView()
         view.backgroundColor = .white
+        setupAuthorizationView()
+        setupBindings()
 
     }
     
@@ -30,12 +33,35 @@ class AuthorizationController: UIViewController {
             authorizationHeader.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             authorizationHeader.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             
-            
             authorizationForm.topAnchor.constraint(equalTo: authorizationHeader.bottomAnchor, constant: 40),
             authorizationForm.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             authorizationForm.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             authorizationForm.heightAnchor.constraint(equalToConstant: 210)
         ])
     }
+    
+    
+    private func setupBindings() {
+        authorizationForm.delegate = self
+    }
+    
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+           alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+           present(alert, animated: true, completion: nil)
+       }
 
+}
+
+extension AuthorizationController: AuthorizationFormDelegate {
+    func submitForm(email: String, password: String) {
+        viewModel.login(email: email, password: password) { [weak self] status, message in
+            switch status {
+            case true:
+                self?.showAlert(title: "ვალიდაცია", message: message)
+            case false:
+                self?.showAlert(title: "დაფიქსირდა შეცდომა", message: message)
+            }
+        }
+    }
 }
