@@ -1,6 +1,6 @@
 //
 //  ProductNetworkService.swift
-//  satestooo
+//  Collaboration-Project
 //
 //  Created by gvanca koxreidze on 15.06.24.
 //
