@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C929F4C2C20293F000477F7 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C929F4B2C20293F000477F7 /* PopUpViewController.swift */; };
 		D04DFBCE2C1CB5BC005FFDBB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04DFBCD2C1CB5BC005FFDBB /* Extensions.swift */; };
 		D2D187FF2C1B7B0E00B29A81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D187FE2C1B7B0E00B29A81 /* AppDelegate.swift */; };
 		D2D188012C1B7B0E00B29A81 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D188002C1B7B0E00B29A81 /* SceneDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C929F4B2C20293F000477F7 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		D04DFBCD2C1CB5BC005FFDBB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D2D187FB2C1B7B0E00B29A81 /* Collaboration-Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Collaboration-Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D187FE2C1B7B0E00B29A81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C929F4A2C202925000477F7 /* Payment-Info */ = {
+			isa = PBXGroup;
+			children = (
+				0C929F4B2C20293F000477F7 /* PopUpViewController.swift */,
+			);
+			path = "Payment-Info";
+			sourceTree = "<group>";
+		};
 		D2D187F22C1B7B0E00B29A81 = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +71,7 @@
 				D2D187FE2C1B7B0E00B29A81 /* AppDelegate.swift */,
 				D2D188002C1B7B0E00B29A81 /* SceneDelegate.swift */,
 				D2D188022C1B7B0E00B29A81 /* ViewController.swift */,
+				0C929F4A2C202925000477F7 /* Payment-Info */,
 				D2D1880A2C1B7B0F00B29A81 /* Assets.xcassets */,
 				D2D1880C2C1B7B0F00B29A81 /* LaunchScreen.storyboard */,
 				D2D1880F2C1B7B0F00B29A81 /* Info.plist */,
@@ -144,6 +155,7 @@
 				D2D188032C1B7B0E00B29A81 /* ViewController.swift in Sources */,
 				D2D188092C1B7B0E00B29A81 /* Collaboration_Project.xcdatamodeld in Sources */,
 				D2D187FF2C1B7B0E00B29A81 /* AppDelegate.swift in Sources */,
+				0C929F4C2C20293F000477F7 /* PopUpViewController.swift in Sources */,
 				D2D188012C1B7B0E00B29A81 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
