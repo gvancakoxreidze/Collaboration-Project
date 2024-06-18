@@ -10,7 +10,7 @@ import UIKit
 class AuthorizationController: UIViewController {
     
     private let viewModel = AuthorizationViewModel()
-
+    
     private let authorizationHeader = AutorizationHeader()
     private let authorizationForm = AuthorizationForm()
     
@@ -19,7 +19,7 @@ class AuthorizationController: UIViewController {
         view.backgroundColor = .white
         setupAuthorizationView()
         setupBindings()
-
+        
     }
     
     private func setupAuthorizationView() {
@@ -47,20 +47,24 @@ class AuthorizationController: UIViewController {
     
     private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-           alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-           present(alert, animated: true, completion: nil)
-       }
-
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
 }
 
 extension AuthorizationController: AuthorizationFormDelegate {
     func submitForm(email: String, password: String) {
+        authorizationForm.setLoading(true)
         viewModel.login(email: email, password: password) { [weak self] status, message in
-            switch status {
-            case true:
-                self?.showAlert(title: "ვალიდაცია", message: message)
-            case false:
-                self?.showAlert(title: "დაფიქსირდა შეცდომა", message: message)
+            DispatchQueue.main.async {
+                self?.authorizationForm.setLoading(false)
+                switch status {
+                case true:
+                    self?.showAlert(title: "ავტორიზაცია", message: "ავტორიზაცია წარმატებულია")
+                case false:
+                    self?.showAlert(title: "დაფიქსირდა შეცდომა", message: message)
+                }
             }
         }
     }
