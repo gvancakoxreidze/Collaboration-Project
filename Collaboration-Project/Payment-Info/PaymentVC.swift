@@ -1,12 +1,12 @@
 //
-//  PopUpViewController.swift
+//  PaymentVC.swift
 //  Collaboration-Project
 //
 //  Created by Tornike Eristavi on 17.06.24.
 //
 import UIKit
 
-class PopUpViewController: UIView {
+class PaymentVC: UIView {
     let messageLabel = UILabel()
     let returnButtonContainer = UIView()
     let returnButton = UIButton()

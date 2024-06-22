@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C929F4C2C20293F000477F7 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C929F4B2C20293F000477F7 /* PopUpViewController.swift */; };
+		0C929F4C2C20293F000477F7 /* PaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C929F4B2C20293F000477F7 /* PaymentVC.swift */; };
+		0C929F532C22BE31000477F7 /* ProductStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C929F522C22BE31000477F7 /* ProductStruct.swift */; };
+		0C929F552C22C14F000477F7 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C929F542C22C14F000477F7 /* ProductCell.swift */; };
+		0C929F572C22C4CD000477F7 /* TemporaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C929F562C22C4CD000477F7 /* TemporaryVC.swift */; };
+		0C929F5B2C22ED58000477F7 /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C929F5A2C22ED58000477F7 /* CartVC.swift */; };
 		D04DFBCE2C1CB5BC005FFDBB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04DFBCD2C1CB5BC005FFDBB /* Extensions.swift */; };
 		D2D187FF2C1B7B0E00B29A81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D187FE2C1B7B0E00B29A81 /* AppDelegate.swift */; };
 		D2D188012C1B7B0E00B29A81 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D188002C1B7B0E00B29A81 /* SceneDelegate.swift */; };
@@ -18,7 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0C929F4B2C20293F000477F7 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		0C929F4B2C20293F000477F7 /* PaymentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentVC.swift; sourceTree = "<group>"; };
+		0C929F522C22BE31000477F7 /* ProductStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductStruct.swift; sourceTree = "<group>"; };
+		0C929F542C22C14F000477F7 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		0C929F562C22C4CD000477F7 /* TemporaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporaryVC.swift; sourceTree = "<group>"; };
+		0C929F5A2C22ED58000477F7 /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
 		D04DFBCD2C1CB5BC005FFDBB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D2D187FB2C1B7B0E00B29A81 /* Collaboration-Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Collaboration-Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D187FE2C1B7B0E00B29A81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,9 +52,21 @@
 		0C929F4A2C202925000477F7 /* Payment-Info */ = {
 			isa = PBXGroup;
 			children = (
-				0C929F4B2C20293F000477F7 /* PopUpViewController.swift */,
+				0C929F4B2C20293F000477F7 /* PaymentVC.swift */,
+				D04DFBCD2C1CB5BC005FFDBB /* Extensions.swift */,
 			);
 			path = "Payment-Info";
+			sourceTree = "<group>";
+		};
+		0C929F4D2C2173D9000477F7 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				0C929F5A2C22ED58000477F7 /* CartVC.swift */,
+				0C929F542C22C14F000477F7 /* ProductCell.swift */,
+				0C929F562C22C4CD000477F7 /* TemporaryVC.swift */,
+				0C929F522C22BE31000477F7 /* ProductStruct.swift */,
+			);
+			path = Cart;
 			sourceTree = "<group>";
 		};
 		D2D187F22C1B7B0E00B29A81 = {
@@ -76,7 +96,7 @@
 				D2D1880C2C1B7B0F00B29A81 /* LaunchScreen.storyboard */,
 				D2D1880F2C1B7B0F00B29A81 /* Info.plist */,
 				D2D188072C1B7B0E00B29A81 /* Collaboration_Project.xcdatamodeld */,
-				D04DFBCD2C1CB5BC005FFDBB /* Extensions.swift */,
+				0C929F4D2C2173D9000477F7 /* Cart */,
 			);
 			path = "Collaboration-Project";
 			sourceTree = "<group>";
@@ -152,10 +172,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D04DFBCE2C1CB5BC005FFDBB /* Extensions.swift in Sources */,
+				0C929F532C22BE31000477F7 /* ProductStruct.swift in Sources */,
 				D2D188032C1B7B0E00B29A81 /* ViewController.swift in Sources */,
+				0C929F5B2C22ED58000477F7 /* CartVC.swift in Sources */,
 				D2D188092C1B7B0E00B29A81 /* Collaboration_Project.xcdatamodeld in Sources */,
 				D2D187FF2C1B7B0E00B29A81 /* AppDelegate.swift in Sources */,
-				0C929F4C2C20293F000477F7 /* PopUpViewController.swift in Sources */,
+				0C929F4C2C20293F000477F7 /* PaymentVC.swift in Sources */,
+				0C929F552C22C14F000477F7 /* ProductCell.swift in Sources */,
+				0C929F572C22C4CD000477F7 /* TemporaryVC.swift in Sources */,
 				D2D188012C1B7B0E00B29A81 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
