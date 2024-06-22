@@ -12,6 +12,9 @@
 		D23C6DDB2C1F2912008663A4 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C6DD62C1F2912008663A4 /* ProductModel.swift */; };
 		D23C6DDC2C1F2912008663A4 /* ProductNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C6DD82C1F2912008663A4 /* ProductNetworkService.swift */; };
 
+
+		D0B4858E2C216D1E0099991B /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B4858D2C216D1E0099991B /* AuthService.swift */; };
+
 		D0F40A122C1DB1B400B78435 /* AuthorizationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F40A112C1DB1B400B78435 /* AuthorizationModel.swift */; };
 		D0F40A142C1DB1C400B78435 /* AuthorizationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F40A132C1DB1C400B78435 /* AuthorizationViewModel.swift */; };
 		D0F40A162C1DB21800B78435 /* AuthorizationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F40A152C1DB21800B78435 /* AuthorizationController.swift */; };
@@ -30,8 +33,12 @@
 /* Begin PBXFileReference section */
 		D04DFBCD2C1CB5BC005FFDBB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 
+
 		D23C6DD62C1F2912008663A4 /* ProductModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		D23C6DD82C1F2912008663A4 /* ProductNetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductNetworkService.swift; sourceTree = "<group>"; };
+
+
+		D0B4858D2C216D1E0099991B /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 
 		D0F40A112C1DB1B400B78435 /* AuthorizationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationModel.swift; sourceTree = "<group>"; };
 		D0F40A132C1DB1C400B78435 /* AuthorizationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewModel.swift; sourceTree = "<group>"; };
@@ -92,6 +99,7 @@
 				D0F40A112C1DB1B400B78435 /* AuthorizationModel.swift */,
 				D0F40A132C1DB1C400B78435 /* AuthorizationViewModel.swift */,
 				D0F40A152C1DB21800B78435 /* AuthorizationController.swift */,
+				D0B4858D2C216D1E0099991B /* AuthService.swift */,
 				D0F40A172C1DB44300B78435 /* Components */,
 			);
 			path = Authorization;
@@ -238,6 +246,7 @@
 
 				D0F40A1A2C1DB46E00B78435 /* AuthorizationForm.swift in Sources */,
 
+				D0B4858E2C216D1E0099991B /* AuthService.swift in Sources */,
 				D2D188032C1B7B0E00B29A81 /* ViewController.swift in Sources */,
 				D2D188092C1B7B0E00B29A81 /* Collaboration_Project.xcdatamodeld in Sources */,
 				D0F40A122C1DB1B400B78435 /* AuthorizationModel.swift in Sources */,

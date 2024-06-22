@@ -45,10 +45,10 @@ class AuthorizationForm: UIView {
     
     private var submitButton: UIButton = {
         let button = UIButton()
-        button.setTitle("შესვლა", for: .normal)
         button.backgroundColor = UIColor(red: 68/255, green: 165/255, blue: 255/255, alpha: 1.0)
         button.layer.cornerRadius = 10
         button.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .bold)
+        button.setTitle("შესვლა", for: .normal)
         button.titleLabel?.text = button.titleLabel?.text?.uppercased()
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -61,6 +61,18 @@ class AuthorizationForm: UIView {
             self?.submit()
         }), for: .touchUpInside)
         
+    }
+    
+    func setLoading(_ loading: Bool) {
+        if loading {
+            submitButton.setTitle("Loading...", for: .normal)
+            submitButton.isEnabled = false
+            submitButton.backgroundColor = .systemGray3
+        } else {
+            submitButton.setTitle("შესვლა", for: .normal)
+            submitButton.isEnabled = true
+            submitButton.backgroundColor = UIColor(red: 68/255, green: 165/255, blue: 255/255, alpha: 1.0)
+        }
     }
     
     required init?(coder: NSCoder) {

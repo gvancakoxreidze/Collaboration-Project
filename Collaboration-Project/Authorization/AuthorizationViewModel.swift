@@ -9,6 +9,8 @@ import Foundation
 
 class AuthorizationViewModel {
     
+    let authService = AuthService()
+    var user: User?
     
     func login(email: String, password: String, completion: @escaping (Bool, String) -> Void) {
         
@@ -22,7 +24,22 @@ class AuthorizationViewModel {
             return
         }
         
-        completion(true, "ველები სწორიააა")
+        authService.login(email: email, password: password) { result in
+            switch result {
+            case .success(let user):
+                self.user = user
+                do {
+                    let encoder = JSONEncoder()
+                    let data = try encoder.encode(user)
+                    UserDefaults.standard.set(data, forKey: "user")
+                } catch {
+                    print("დაფიქსირდა შეცდომა!")
+                }
+                completion(true, "ავტორიზაცია")
+            case .failure(let error):
+                completion(false, error.localizedDescription)
+            }
+        }
     }
     
 }
